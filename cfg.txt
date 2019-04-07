@@ -1,0 +1,6 @@
+URL:
+jdbc:mysql://localhost:3306/mediasoft?useSSL=false
+LOGIN:
+root
+PASSWORD:
+BVCdsa45
