@@ -1,7 +1,6 @@
 package com.eternal_call.projectForMediaSoft.ResumeAndVacancy;
 import com.eternal_call.projectForMediaSoft.DataBase.ConnectionToDataBase;
 import org.apache.log4j.Logger;
-
 import java.io.*;
 import java.sql.*;
 
@@ -19,8 +18,6 @@ public abstract class Template {
     protected String sql_end = "%'";
     protected String sql_separator = "', '";
     protected String sql_separator_end = "')";
-
-
 
     protected Connection connect() throws SQLException, ClassNotFoundException, IOException { //подключение к БД
         ConnectionToDataBase connectionToDB = new ConnectionToDataBase(); // Инициализация класса с  url, login, password, driverName

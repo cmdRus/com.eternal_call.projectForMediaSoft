@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 import static com.eternal_call.projectForMediaSoft.Main.mainer;
 
+
 public class SweatcherForResumeMenu {
     private static Logger logger = Logger.getLogger(SweatcherForResumeMenu.class); //инициализация логирования
 
@@ -14,6 +15,7 @@ public class SweatcherForResumeMenu {
         Scanner scanner = new Scanner(System.in);
         Resume resume = new Resume();
         int x = scanner.nextInt();
+
         switch (x){
             case(1):{ // Просмотр всех резюме
                 System.out.println("Вы выбрали пункт: Просмотр всех резюме в БД");

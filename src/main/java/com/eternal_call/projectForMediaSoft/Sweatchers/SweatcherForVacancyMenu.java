@@ -1,7 +1,6 @@
 package com.eternal_call.projectForMediaSoft.Sweatchers;
 import com.eternal_call.projectForMediaSoft.ResumeAndVacancy.Vacancy;
 import org.apache.log4j.Logger;
-
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -11,7 +10,9 @@ import static com.eternal_call.projectForMediaSoft.Main.mainer;
 public class SweatcherForVacancyMenu {
     public SweatcherForVacancyMenu()  {
     }
+
     private static Logger logger = Logger.getLogger(SweatcherForVacancyMenu.class); //инициализация логирования
+
     public void sweatcher() throws SQLException, IOException, ClassNotFoundException {
         Scanner scanner = new Scanner(System.in);
         Scanner scanner2 = new Scanner(System.in);
@@ -20,6 +21,7 @@ public class SweatcherForVacancyMenu {
         this.outForWindow(); //вывод на экран меню резюме
         int x = scanner.nextInt();
         Vacancy vacancy = new Vacancy();
+
         switch (x){
             case (1):{ // Создание вакансии
                 System.out.println("Вы выбрали пункт: Создание вакансии");

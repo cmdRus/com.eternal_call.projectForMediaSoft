@@ -1,7 +1,6 @@
 package com.eternal_call.projectForMediaSoft;
 import com.eternal_call.projectForMediaSoft.Sweatchers.SweatcherForMainMenu;
 import org.apache.log4j.Logger;
-
 import java.io.IOException;
 import java.util.Scanner;
 

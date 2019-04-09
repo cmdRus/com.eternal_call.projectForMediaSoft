@@ -14,8 +14,6 @@ public class Resume extends Template implements Removing, Searching, Viewing, Re
     private String sql_searchRes = "SELECT * FROM " + dataBaseForResume + " WHERE id LIKE '"; //запрос в бд, для поиска резюме
     private String sql_removeRes = "DELETE FROM " + dataBaseForResume  + " WHERE id LIKE '"; //запрос в бд, для удаления резюме
 
-
-
     @Override
     public void remove(int id) { //реализация удаления в БД
         try{

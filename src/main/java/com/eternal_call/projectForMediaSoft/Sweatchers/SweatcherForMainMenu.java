@@ -1,13 +1,13 @@
 package com.eternal_call.projectForMediaSoft.Sweatchers;
 import org.apache.log4j.Logger;
-
 import java.io.IOException;
 import java.sql.SQLException;
-
 import static com.eternal_call.projectForMediaSoft.Main.mainer;
+
 
 public class SweatcherForMainMenu {
     private static Logger logger = Logger.getLogger(SweatcherForMainMenu.class); //инициализация логирования
+
     public void switcher(int x) throws IOException, SQLException, ClassNotFoundException {
         switch (x){
             case (1):{ //Реализация работы с вакансиями

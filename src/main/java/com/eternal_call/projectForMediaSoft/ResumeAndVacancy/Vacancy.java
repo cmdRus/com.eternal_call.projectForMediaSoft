@@ -27,7 +27,6 @@ public class Vacancy extends Template implements Creating, Removing, Searching, 
         }
     }
 
-
     @Override
     public void remove(int id) {  //реализация удаления данных из БД
         try{

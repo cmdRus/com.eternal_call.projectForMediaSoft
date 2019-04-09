@@ -1,6 +1,4 @@
 package com.eternal_call.projectForMediaSoft.Interfaces;
-
-
 import java.io.IOException;
 import java.sql.SQLException;
 
