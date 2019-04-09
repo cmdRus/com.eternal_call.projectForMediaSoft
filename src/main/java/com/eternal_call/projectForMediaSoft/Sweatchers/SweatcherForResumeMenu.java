@@ -1,16 +1,16 @@
 package com.eternal_call.projectForMediaSoft.Sweatchers;
 import com.eternal_call.projectForMediaSoft.ResumeAndVacancy.Resume;
 import org.apache.log4j.Logger;
-
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 import static com.eternal_call.projectForMediaSoft.Main.mainer;
 
 public class SweatcherForResumeMenu {
-    private static Logger logger = Logger.getLogger(SweatcherForResumeMenu.class);
+    private static Logger logger = Logger.getLogger(SweatcherForResumeMenu.class); //инициализация логирования
+
     public void sweatcher() throws SQLException, IOException, ClassNotFoundException {
-        this.outForWindow();
+        this.outForWindow(); //вывод на экран меню резюме
         Scanner scanner = new Scanner(System.in);
         Resume resume = new Resume();
         int x = scanner.nextInt();

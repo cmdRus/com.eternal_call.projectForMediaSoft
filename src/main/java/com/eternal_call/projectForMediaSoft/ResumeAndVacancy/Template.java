@@ -12,10 +12,10 @@ public abstract class Template {
 
     Statement state = connect().createStatement();
     protected static Logger logger = Logger.getLogger(Template.class);
-    protected String fileForVac = "Vacancy.txt";
-    protected String fileForRes = "Resume.txt";
-    protected String dataBaseForVakancy = "vacancy";
-    protected String dataBaseForResume = "resume";
+    protected String fileForVac = "Vacancy.txt"; //инициализация файла, для выгрузки всех вакансий
+    protected String fileForRes = "Resume.txt"; //инициализация файла, для выгрузки всех резюме
+    protected String dataBaseForVakancy = "vacancy"; //инициализация БД вакансии
+    protected String dataBaseForResume = "resume"; //инициализация БД резюме
     protected String sql_end = "%'";
     protected String sql_separator = "', '";
     protected String sql_separator_end = "')";
@@ -23,7 +23,7 @@ public abstract class Template {
 
 
     protected Connection connect() throws SQLException, ClassNotFoundException, IOException { //подключение к БД
-        ConnectionToDataBase connectionToDB = new ConnectionToDataBase(); // Инициализация класс с  url, login, password, driverName
+        ConnectionToDataBase connectionToDB = new ConnectionToDataBase(); // Инициализация класса с  url, login, password, driverName
         Class.forName(connectionToDB.getdDriverName()); // Определение имени класса драйвера
         Connection conn = DriverManager.getConnection(connectionToDB.getdUrl(), connectionToDB.getdLogin(), //установка соединения с БД
                 connectionToDB.getPassword()); // Создание подключения

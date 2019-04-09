@@ -11,13 +11,13 @@ import static com.eternal_call.projectForMediaSoft.Main.mainer;
 public class SweatcherForVacancyMenu {
     public SweatcherForVacancyMenu()  {
     }
-    private static Logger logger = Logger.getLogger(SweatcherForVacancyMenu.class);
+    private static Logger logger = Logger.getLogger(SweatcherForVacancyMenu.class); //инициализация логирования
     public void sweatcher() throws SQLException, IOException, ClassNotFoundException {
         Scanner scanner = new Scanner(System.in);
         Scanner scanner2 = new Scanner(System.in);
         Scanner scanner3 = new Scanner(System.in);
         Scanner scanner4 = new Scanner(System.in);
-        this.outForWindow();
+        this.outForWindow(); //вывод на экран меню резюме
         int x = scanner.nextInt();
         Vacancy vacancy = new Vacancy();
         switch (x){

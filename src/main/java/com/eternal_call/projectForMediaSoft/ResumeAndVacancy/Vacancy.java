@@ -9,11 +9,11 @@ public class Vacancy extends Template implements Creating, Removing, Searching, 
     public Vacancy() throws SQLException, IOException, ClassNotFoundException{
     }
 
-    private String sql_searchVac = "SELECT * FROM " + dataBaseForVakancy + " WHERE id LIKE '";
-    private String sql_removeVac = "DELETE FROM " + dataBaseForVakancy  + " WHERE id LIKE '";
-    private String sql_view = "select * from " + dataBaseForVakancy;
-    private String sql_columns = "name, duties, hoursInWeek, salary)";
-    private String sql_createVac = "INSERT INTO " + dataBaseForVakancy + " (" + this.sql_columns + " VALUES ('";
+    private String sql_searchVac = "SELECT * FROM " + dataBaseForVakancy + " WHERE id LIKE '"; //запрос в бд, для поиска вакансии
+    private String sql_removeVac = "DELETE FROM " + dataBaseForVakancy  + " WHERE id LIKE '"; //запрос в бд, для удаления вакансии
+    private String sql_view = "select * from " + dataBaseForVakancy; //запрос в бд, для просмотра всех вакансий
+    private String sql_columns = "name, duties, hoursInWeek, salary)"; //инициализация колонок, для создания вакансии
+    private String sql_createVac = "INSERT INTO " + dataBaseForVakancy + " (" + this.sql_columns + " VALUES ('"; //запрос в бд, для создания вакансии
 
     @Override
     public void create(String nameNew, String dutiesNew, int conditionsNew, int salaryNew) {
@@ -64,7 +64,7 @@ public class Vacancy extends Template implements Creating, Removing, Searching, 
     }
 
     @Override
-    public void record() {
+    public void record() { //запись в файл вакансий
         System.out.println("Хотите выгрузить всё в файл? Нажмите 1");
         System.out.println("В обратном случае, нажмите 2");
         Scanner scanner = new Scanner(System.in);

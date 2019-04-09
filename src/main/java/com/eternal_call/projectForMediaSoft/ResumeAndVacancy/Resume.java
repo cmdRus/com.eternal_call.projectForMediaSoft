@@ -10,14 +10,14 @@ public class Resume extends Template implements Removing, Searching, Viewing, Re
     public Resume() throws SQLException, IOException, ClassNotFoundException{
     }
 
-    private String sql_view = "select * from " + dataBaseForResume;
-    private String sql_searchRes = "SELECT * FROM " + dataBaseForResume + " WHERE id LIKE '";
-    private String sql_removeRes = "DELETE FROM " + dataBaseForResume  + " WHERE id LIKE '";
+    private String sql_view = "select * from " + dataBaseForResume; //запрос в бд, для просмотра всех резюме
+    private String sql_searchRes = "SELECT * FROM " + dataBaseForResume + " WHERE id LIKE '"; //запрос в бд, для поиска резюме
+    private String sql_removeRes = "DELETE FROM " + dataBaseForResume  + " WHERE id LIKE '"; //запрос в бд, для удаления резюме
 
 
 
     @Override
-    public void remove(int id) {
+    public void remove(int id) { //реализация удаления в БД
         try{
             state.executeUpdate(this.sql_removeRes + id + sql_end); //SQL запрос в БД
             connect().close();
@@ -27,7 +27,7 @@ public class Resume extends Template implements Removing, Searching, Viewing, Re
     }
 
     @Override
-    public void search(int id)  throws IOException {
+    public void search(int id)  throws IOException { //реализация поиска в БД
         try{
             System.out.println("Поиск вакансии в базе данных");
             ResultSet resSet = state.executeQuery(this.sql_searchRes + id + sql_end); //SQL запрос в БД
@@ -39,7 +39,7 @@ public class Resume extends Template implements Removing, Searching, Viewing, Re
     }
 
     @Override
-    public void view() {
+    public void view() { //реализация просмотра в БД
         try{
             System.out.println("Просмотр всех данных в базе данных: Вакансии");
             ResultSet resSet = state.executeQuery(this.sql_view); //SQL запрос в БД
@@ -52,7 +52,7 @@ public class Resume extends Template implements Removing, Searching, Viewing, Re
     }
 
     @Override
-    public void record() {
+    public void record() { //запись в файл резюме
         System.out.println("Хотите выгрузить всё в файл? Нажмите 1");
         System.out.println("В обратном случае, нажмите 2");
         Scanner scanner = new Scanner(System.in);
