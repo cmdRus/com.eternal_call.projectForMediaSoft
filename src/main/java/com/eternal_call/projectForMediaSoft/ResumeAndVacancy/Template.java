@@ -28,7 +28,7 @@ public abstract class Template {
     }
 
     protected void outInfoVac(ResultSet resSet) throws SQLException { //вывод запроса (вакансии) на экран
-        while (resSet.next()){ //Вывод на экран результата запроса
+        while (resSet.next()){ //Вывод на экран результат запроса
             System.out.print(resSet.getInt(1) + " |  ");
             System.out.print(resSet.getString(2) + " |  ");
             System.out.print(resSet.getString(3) + " |  ");
@@ -39,7 +39,7 @@ public abstract class Template {
     }
 
     protected void outInfoRes(ResultSet resSet) throws SQLException { //вывод запроса (резюме) на экран
-        while (resSet.next()){ //Вывод на экран результата запроса
+        while (resSet.next()){ //Вывод на экран результат запроса
             System.out.print(resSet.getInt(1) + " |  ");
             System.out.print(resSet.getString(2) + " |  ");
             System.out.print(resSet.getString(3) + " |  ");
